@@ -1,6 +1,3 @@
-// array, object
-
-
 var f = function f1() {
     console.log(1+1);
     console.log(1+2);
@@ -13,9 +10,3 @@ var o = {
 }
 o.func();
 
-// console.log(f);
-// f();
-
-//var i = if(true){console.log(1)};
-
-// var w = while(true){console.log(1)};
