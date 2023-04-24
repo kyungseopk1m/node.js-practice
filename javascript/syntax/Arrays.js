@@ -17,7 +17,18 @@ const itemsCopy = [...items];
 // const codes = Array.from(foo);
 
 // best
-const nodes = [...foo];
+// const nodes = [...foo];
 
 // 4-4
 // 순회 가능한 객체를 배열로 변환할 때는 Array.from 대신 전개 구문 ...을 사용
+
+const arrLike = { 0: 'foo', 1: 'bar', 2: 'baz', length: 3 };
+const arr = Array.from(arrLike);
+
+// 4-5
+// array-like 객체를 배열로 변환할 때는 Array.from 사용
+
+const baz = Array.from(foo, bar);
+
+// 4-6
+// 매핑할 때는 전개 구문 ... 대신 Array.from 사용
