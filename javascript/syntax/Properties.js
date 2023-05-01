@@ -18,6 +18,7 @@ function getProp(prop) {
 const isJedi1 = getProp('jedi');
 
 
+
 // 12-3
 // 제곱 계산을 할 때는 제곱 연산자 **를 사용
 const binary = 2 ** 10;
