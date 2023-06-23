@@ -1,13 +1,19 @@
-import { Request, Response } from 'express';
+import express from 'express';
+// const customerRoute = require('./routes/customer');
+// const productRoute = require('./routes/product');
+import { customerRouter } from './routes/customer';
+import { productRouter } from './routes/product';
 
-const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/', (req: Request, res: Response) => {
-  res.send('hola ks!');
-});
+app.use(express.json({
+  limit: '50mb',
+}));
+
+app.use('/customer', customerRouter);
+app.use('/product', productRouter);
 
 app.listen(port, () => {
-  console.log(`서버 실행. http://localhost:${port}`);
+  console.log(`Server started. port:${port}`);
 });
