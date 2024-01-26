@@ -5,7 +5,7 @@ import { customerRouter } from './routes/customer';
 import { productRouter } from './routes/product';
 
 const app = express();
-const port = 3000;
+const port = 8000;
 
 app.use(express.json({
   limit: '50mb',
